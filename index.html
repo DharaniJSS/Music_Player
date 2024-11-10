@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <!-- Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 flex items-center justify-center min-h-screen">
+    <div id="music-card" class="container bg-white bg-opacity-70 rounded-lg shadow-lg p-6 backdrop-filter backdrop-blur-lg flex flex-col items-center justify-between w-96 h-auto transition-transform duration-300 ease-in-out transform hover:translate-y-1.5">
+        <img id="thumbnail" src="R.png" alt="Thumbnail" class="w-48 h-48 rounded-md mb-4">
+        <div class="controls flex justify-center items-center space-x-4 mb-4">
+            <button id="prev" class="text-blue-600 hover:text-blue-800 transform transition-transform duration-300 text-base"><i class="fas fa-backward"></i></button>
+            <button id="play" class="text-green-600 hover:text-green-800 transform transition-transform duration-300 text-base"><i class="fas fa-play"></i></button>
+            <button id="pause" class="text-red-600 hover:text-red-800 transform transition-transform duration-300 hidden text-base"><i class="fas fa-pause"></i></button>
+            <button id="next" class="text-blue-600 hover:text-blue-800 transform transition-transform duration-300 text-base"><i class="fas fa-forward"></i></button>
+        </div>
+        <div class="track-info text-center mb-2">
+            <p id="track-name" class="text-lg font-semibold">Track Name</p>
+        </div>
+        <div class="time-info flex justify-between w-full text-xs mb-2">
+            <span id="current-time">0:00</span>
+            <span id="duration-time">0:00</span>
+        </div>
+        <input type="range" id="progress" class="w-full mb-6 h-2" min="0" value="0">
+        <input type="range" id="volume" class="w-full h-2 rounded-lg" min="0" max="100" value="50">
+        <audio id="audio"></audio>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

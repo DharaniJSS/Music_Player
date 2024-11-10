@@ -1,0 +1,48 @@
+button:hover {
+    transform: scale(1.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+#progress, #volume {
+    -webkit-appearance: none;
+    appearance: none;
+    height: 8px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    transition: opacity .2s;
+}
+
+#progress:hover, #volume:hover {
+    opacity: 1;
+}
+
+#progress::-webkit-slider-thumb, #volume::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 14px;
+    height: 14px;
+    background: #007aff;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+#progress::-moz-range-thumb, #volume::-moz-range-thumb {
+    width: 14px;
+    height: 14px;
+    background: #007aff;
+    cursor: pointer;
+    border-radius: 50%;
+    border: none;
+    transition: width 0.2s ease-in-out, height 0.2s ease-in-out;
+}
+
+#progress::-moz-range-thumb:hover, #volume::-moz-range-thumb:hover {
+    width: 16px;
+    height: 16px;
+}
+
+#music-card:hover {
+    transition: transform 0.3s ease-in-out;
+    transform: translateY(-10px);
+}
